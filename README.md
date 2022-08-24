@@ -6,7 +6,7 @@ In this project you will find:
 - Using NgForm (with invalid form) & NgModel (with control's validation errors).
 - Password helper, created with regex.
 - Show/hide password toggle.
-- Submit disabled when the form is invalid.
+- Submit button disabled when the form is invalid.
 
 You can see your inputs' value in console.log.
 
