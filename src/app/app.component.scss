@@ -1,0 +1,33 @@
+.title-box, .body-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  h1{
+    text-align: center;
+    color: #5627b9;
+
+  }
+}
+
+.title-box{
+  margin-top: 150px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.body-box{
+  margin-top: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding-right: 35px;
+  input{
+    width: 90%;
+  }
+
+  .custom-btn{
+    background: #a94cc6;
+    color: white;
+    font-weight: 600;
+    margin-left: 15px;
+  }
+}
