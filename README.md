@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
 ## See the project
-To run the project, click [here](https://stackblitz.com/github/emmepi92/singup-angular)
+To run the project on stackblitz, click [here](https://stackblitz.com/github/emmepi92/singup-angular)
 
 ## Development server
 
