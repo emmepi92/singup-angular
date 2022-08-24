@@ -6,20 +6,53 @@
   </div>
   <div class="row justify-content-center">
     <div class="col-12 col-sm-10 col-md-6 col-lg-4 body-box">
+      <div class="alert alert-danger" role="alert" *ngIf="email.invalid &&  email.touched">
+        <h5>Email:</h5>
+        <ul>
+          <li *ngIf="email.errors?.['required']">It's required</li>
+          <li *ngIf="email.errors?.['email']">The email is incomplete</li>
+        </ul>
+      </div>
 
-      <form action="">
+      <div class="alert alert-danger" role="alert" *ngIf="pass.invalid && (pass.dirty || pass.touched)">
+        <h5>Password:</h5>
+        <ul>
+          <li *ngIf="pass.errors?.['required']">It's required</li>
+        </ul>
+      </div>
+
+      <form #f="ngForm" (ngSubmit)="signup(f)">
         <div class="row align-items-center pt-4 pb-2">
           <label for="email" class="col-4 form-label mb-0">Email</label>
-          <input id="email" type="text" class="col form-control" required>
+          <div class="col">
+            <input  id="email" #email="ngModel" ngModel name="email" type="email" class="form-control" required email>
+          </div>
         </div>
 
-        <div class="row align-items-center pb-4 mr-4">
+        <div class="row align-items-center pb-4 ">
           <label for="email" class="col-4 form-label mb-0">Password</label>
-          <input id="email" type="email" class="col form-control" required>
+          <div class="col input-container">
+            <input id="email" class="form-control" (ngModelChange)="passWriting(pass)" #pass="ngModel" ngModel name="password" type="{{passwordInput}}" required>
+            <span (click)="toggleShowPass()" class="material-icons absolute">visibility</span>
+          </div>
         </div>
-        <div class="row justify-content-center">
-          <button type="submit" class="btn custom-btn">Submit</button>
+        <div class="row" *ngIf="!passComplete">
+          <div class="helper col" *ngIf="passIsWriting">
+            Password must contain:
+            <ul>
+              <li [ngClass]="is8Chars ? 'green-right' : 'red-error'">Minimum 8 characters</li>
+              <li [ngClass]="is1CharUp ? 'green-right' : 'red-error'">A uppercase letter</li>
+              <li [ngClass]="is1CharDown ? 'green-right' : 'red-error'">A lower case letter</li>
+              <li [ngClass]="is1Num ? 'green-right' : 'red-error'">At least one number</li>
+              <li [ngClass]="is1SpecialDigit ? 'green-right' : 'red-error'">
+                One special chacarters: *!@#$%^&+=</li>
+            </ul>
+          </div>
 
+        </div>
+        
+        <div class="row justify-content-center">
+          <button type="submit" class="btn custom-btn" [disabled]="!f.valid">Sign up!</button>
         </div>
 
       </form>

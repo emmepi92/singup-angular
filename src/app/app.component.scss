@@ -5,7 +5,6 @@
   h1{
     text-align: center;
     color: #5627b9;
-
   }
 }
 
@@ -20,14 +19,44 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   padding-right: 35px;
-  input{
-    width: 90%;
+
+  .input-container{
+    position: relative;
+
+    span.absolute{
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      right: 3%;
+      cursor: pointer;
+    }
   }
+
+    .helper {
+      font-size: 14px;
+      ul {
+        padding-left: 17px;
+        li {
+          &.green-right,
+          &.green_right {
+            color: rgb(74, 202, 74);
+          }
+  
+          &.red-error {
+            color: red;
+          }
+        }
+      }
+    }
 
   .custom-btn{
     background: #a94cc6;
     color: white;
     font-weight: 600;
     margin-left: 15px;
+    &:disabled {
+        background-color: rgb(132, 147, 162);
+        cursor: auto;
+      }
   }
 }
