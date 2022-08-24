@@ -7,7 +7,8 @@ In this project you will find:
 - Password helper, created with regex.
 - Show/hide password toggle.
 - Submit disabled when the form is invalid.
-- You can see your inputs' value in console.log.
+
+You can see your inputs' value in console.log.
 
 ## See the project
 To run the project on stackblitz, click [here](https://stackblitz.com/github/emmepi92/singup-angular)
