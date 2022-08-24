@@ -2,7 +2,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
 In this project you will find:
-- Using Bootstrap & Angular Icon.
+- Using Bootstrap & Angular Icon (full responsive).
 - Using NgForm (with invalid form) & NgModel (with control's validation errors).
 - Password helper, created with regex.
 - Show/hide password toggle.
