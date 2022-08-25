@@ -41,7 +41,7 @@ export class AppComponent {
     this.is1Num = has1Num.test(this.pass);
     this.is1SpecialDigit = has1SpecialDigit.test(this.pass);
 
-    this.passComplete = [this.is8Chars, this.is1CharUp, this.is1CharDown, this.is1Num, this.is1SpecialDigit].every(x => x == true);
+    this.passComplete = [this.is8Chars, this.is1CharUp, this.is1CharDown, this.is1Num, this.is1SpecialDigit].every(passwordTarget => passwordTarget == true);
   }
 
   signup(form: NgForm): void {
